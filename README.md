@@ -82,3 +82,118 @@ El archivo app.js actúa como punto de inicio del programa. Se encarga de:
  - Coordinar las interacciones del usuario con los distintos gestores.
 
  - Realizar pruebas para verificar el correcto funcionamiento de las funciones del sistema.
+
+
+---
+
+# Compatibilidad con otros navegadores
+
+Este proyecto es un sistema de gestión académica desarrollado con JavaScript, Webpack y Babel. A continuación, se detallan los pasos para configurar el entorno, desplegar el código y probar su funcionamiento.
+
+---
+
+## **1. Configuración del entorno**
+
+Sigue estos pasos para configurar el entorno de desarrollo:
+
+1. **Instalar Node.js y npm**:
+   - Descarga e instala Node.js desde [nodejs.org](https://nodejs.org/).
+   - Verifica la instalación ejecutando en la terminal:
+     ```bash
+     node -v
+     npm -v
+     ```
+
+2. **Clonar el repositorio**:
+   - Clona el repositorio de GitHub en tu máquina local:
+     ```bash
+     git clone https://github.com/LauraNC28/DWEC_Laura_Nievas_Coca_2.git
+     cd ProyectoSGAEA
+     ```
+
+3. **Instalar dependencias**:
+   - Instala las dependencias del proyecto con npm:
+     ```bash
+     npm install
+     ```
+
+4. **Compilar el proyecto**:
+   - Compila el proyecto para producción:
+     ```bash
+     npm run build
+     ```
+   - Esto generará los archivos en la carpeta `dist`.
+
+---
+
+## **2. Desplegar el código en GitHub Pages**
+
+Para desplegar el proyecto en GitHub Pages, sigue estos pasos:
+
+1. **Subir el código a GitHub**:
+   - Añade los archivos al área de preparación, haz commit y súbelos a GitHub:
+     ```bash
+     git add .
+     git commit -m "Subiendo proyecto listo para producción"
+     git push origin master
+     ```
+
+2. **Configurar GitHub Pages**:
+   - Ve a la página de tu repositorio en GitHub.
+   - Haz clic en **Settings** > **Pages**.
+   - En **Source**, selecciona la rama `master` y la carpeta `dist` (o `/docs` si moviste los archivos allí).
+   - Guarda los cambios y espera a que GitHub Pages genere la URL de tu sitio web.
+
+3. **Acceder al sitio web**:
+   - Una vez configurado, accede a tu sitio web en la URL proporcionada por GitHub Pages, por ejemplo:
+     ```
+     https://LauraNC28.github.io/DWEC_Laura_Nievas_Coca_2/
+     ```
+     
+---
+
+## **3. Probar el código**
+
+Para probar el código en diferentes navegadores y entornos, sigue estos pasos:
+
+1. **Pruebas manuales**:
+   - Abre el sitio web en diferentes navegadores (Chrome, Firefox, Safari, Edge) y verifica que todo funcione correctamente.
+   - Usa herramientas como **BrowserStack** o **LambdaTest** para probar en navegadores antiguos (por ejemplo, Internet Explorer 11).
+
+2. **Pruebas automatizadas**:
+   - Si has configurado pruebas automatizadas con **Cypress** o **Katalon Studio**, ejecuta las pruebas para verificar el comportamiento del sitio web.
+   - Ejemplo con Cypress:
+     ```bash
+     npx cypress open
+     ```
+
+3. **Verificar la compatibilidad**:
+   - Asegúrate de que el sitio web funcione correctamente en dispositivos móviles, tablets y diferentes resoluciones de pantalla.
+
+---
+
+## **4. Resultados de las pruebas**
+
+Después de realizar las pruebas, se obtuvieron los siguientes resultados:
+
+### **Navegadores modernos**
+- **Chrome (última versión)**: El sitio web funciona correctamente. Todos los elementos se muestran como se esperaba.
+- **Firefox (última versión)**: Comportamiento similar a Chrome. Sin problemas detectados.
+- **Safari (última versión)**: Funciona correctamente, pero se observa un ligero retraso en la carga de imágenes.
+
+### **Navegadores antiguos**
+- **Internet Explorer 11**: El sitio web no funciona correctamente. Algunas funcionalidades modernas (como Flexbox y Grid) no son compatibles.
+- **Safari 12**: Funciona correctamente, pero algunas animaciones CSS no se reproducen.
+
+### **Dispositivos móviles**
+- **Android (Chrome)**: El sitio web es responsive y se adapta correctamente a diferentes tamaños de pantalla.
+- **iOS (Safari)**: Funciona correctamente, pero se observa un problema con el desplazamiento suave (smooth scrolling).
+
+### **Accesibilidad**
+- El sitio web pasa las pruebas básicas de accesibilidad, pero se recomienda mejorar el contraste de colores para cumplir con las pautas WCAG.
+
+---
+
+## **Conclusión**
+
+El sitio web funciona correctamente en navegadores modernos y dispositivos móviles, pero presenta problemas de compatibilidad en navegadores antiguos como Internet Explorer 11. Se recomienda implementar polyfills o soluciones alternativas para mejorar la compatibilidad con navegadores antiguos.
