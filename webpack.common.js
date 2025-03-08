@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default {
   entry: './fuente/src/app.js',
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
+    path: path.resolve(process.cwd(), 'docs'),
     filename: '[name].bundle.js',
   },
   module: {
