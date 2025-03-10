@@ -54,6 +54,74 @@ function main() {
     } while (opcion !== 4); // El bucle sigue hasta que el usuario elige salir
 }
 
+document.getElementById('app').innerHTML = "<h1>¡Funciona!</h1>";
+
+// 1️ Crear asignaturas
+const matematicas = new Asignatura("Matematicas");
+const historia = new Asignatura("Historia");
+const fisica = new Asignatura("Fisica");
+
+listaAsignaturas.añadirAsignatura(matematicas);
+listaAsignaturas.añadirAsignatura(historia);
+listaAsignaturas.añadirAsignatura(fisica);
+
+// 2️ Crear estudiantes
+const estudiante1 = new Estudiante("Ana Gonzalez", 19, "Av. Siempre Viva 742");
+const estudiante2 = new Estudiante("Luis Martinez", 21, "Calle Central 10");
+const estudiante3 = new Estudiante("Carla Rojas", 22, "Paseo del Sol 5");
+
+listaEstudiantes.agregarEstudiante(estudiante1);
+listaEstudiantes.agregarEstudiante(estudiante2);
+listaEstudiantes.agregarEstudiante(estudiante3);
+
+// 3️ Matricular estudiantes en asignaturas
+estudiante1.matricular(matematicas);
+estudiante1.matricular(historia);
+estudiante2.matricular(matematicas);
+estudiante2.matricular(fisica);
+estudiante3.matricular(historia);
+estudiante3.matricular(fisica);
+
+// 4️ Agregar calificaciones
+estudiante1.agregarCalificacion(matematicas, 8);
+estudiante1.agregarCalificacion(historia, 7);
+estudiante2.agregarCalificacion(matematicas, 9);
+estudiante2.agregarCalificacion(fisica, 6);
+estudiante3.agregarCalificacion(historia, 10);
+estudiante3.agregarCalificacion(fisica, 8);
+
+// 5️ Probar búsqueda de asignaturas
+console.log("\n Buscando asignaturas con 'ma':");
+console.log(listaAsignaturas.busquedaAsignaturas("ma"));
+
+// 6️ Probar búsqueda de estudiantes
+console.log("\n Buscando estudiante con 'Luis':");
+console.log(listaEstudiantes.buscarEstudiante("Luis"));
+
+// 7️ Generar reportes
+console.log("\n Reporte de estudiantes:");
+listaEstudiantes.generarReporte();
+
+console.log("\n Reporte de asignaturas:");
+listaAsignaturas.generarReporte();
+
+// 8️ Eliminar un estudiante y ver resultados
+console.log("\n Eliminando a Carla Rojas...");
+listaEstudiantes.eliminarEstudiante(estudiante3.id);
+
+console.log("\n Reporte de estudiantes después de eliminar:");
+listaEstudiantes.generarReporte();
+
+// 9️ Eliminar una asignatura y ver resultados
+console.log("\n Eliminando asignatura Física...");
+listaAsignaturas.eliminarAsignatura("Fisica");
+
+console.log("\n Reporte de asignaturas después de eliminar:");
+listaAsignaturas.generarReporte();
+
+// Llama a la función principal para ejecutar el programa
+main();
+
 
 
 /*
@@ -215,69 +283,3 @@ listaEstudiantes.generarReporte();
 */
 
 
-// 1️ Crear asignaturas
-const matematicas = new Asignatura("Matematicas");
-const historia = new Asignatura("Historia");
-const fisica = new Asignatura("Fisica");
-
-listaAsignaturas.añadirAsignatura(matematicas);
-listaAsignaturas.añadirAsignatura(historia);
-listaAsignaturas.añadirAsignatura(fisica);
-
-// 2️ Crear estudiantes
-const estudiante1 = new Estudiante("Ana Gonzalez", 19, "Av. Siempre Viva 742");
-const estudiante2 = new Estudiante("Luis Martinez", 21, "Calle Central 10");
-const estudiante3 = new Estudiante("Carla Rojas", 22, "Paseo del Sol 5");
-
-listaEstudiantes.agregarEstudiante(estudiante1);
-listaEstudiantes.agregarEstudiante(estudiante2);
-listaEstudiantes.agregarEstudiante(estudiante3);
-
-// 3️ Matricular estudiantes en asignaturas
-estudiante1.matricular(matematicas);
-estudiante1.matricular(historia);
-estudiante2.matricular(matematicas);
-estudiante2.matricular(fisica);
-estudiante3.matricular(historia);
-estudiante3.matricular(fisica);
-
-// 4️ Agregar calificaciones
-estudiante1.agregarCalificacion(matematicas, 8);
-estudiante1.agregarCalificacion(historia, 7);
-estudiante2.agregarCalificacion(matematicas, 9);
-estudiante2.agregarCalificacion(fisica, 6);
-estudiante3.agregarCalificacion(historia, 10);
-estudiante3.agregarCalificacion(fisica, 8);
-
-// 5️ Probar búsqueda de asignaturas
-console.log("\n Buscando asignaturas con 'ma':");
-console.log(listaAsignaturas.busquedaAsignaturas("ma"));
-
-// 6️ Probar búsqueda de estudiantes
-console.log("\n Buscando estudiante con 'Luis':");
-console.log(listaEstudiantes.buscarEstudiante("Luis"));
-
-// 7️ Generar reportes
-console.log("\n Reporte de estudiantes:");
-listaEstudiantes.generarReporte();
-
-console.log("\n Reporte de asignaturas:");
-listaAsignaturas.generarReporte();
-
-// 8️ Eliminar un estudiante y ver resultados
-console.log("\n Eliminando a Carla Rojas...");
-listaEstudiantes.eliminarEstudiante(estudiante3.id);
-
-console.log("\n Reporte de estudiantes después de eliminar:");
-listaEstudiantes.generarReporte();
-
-// 9️ Eliminar una asignatura y ver resultados
-console.log("\n Eliminando asignatura Física...");
-listaAsignaturas.eliminarAsignatura("Fisica");
-
-console.log("\n Reporte de asignaturas después de eliminar:");
-listaAsignaturas.generarReporte();
-
-
-// Llama a la función principal para ejecutar el programa
-main();
