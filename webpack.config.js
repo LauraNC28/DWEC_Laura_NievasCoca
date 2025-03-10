@@ -3,32 +3,37 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-entry: ['@babel/polyfill', './fuente/src/app.js'],
+entry: ['@babel/polyfill', './fuente/src/app.js'], // Punto de entrada
 output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'docs')
+    filename: 'bundle.js', // Nombre del archivo de salida
+    path: path.resolve(__dirname, 'docs') // Carpeta de salida (docs/)
 },
 
 module: {
     rules: [
     {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.js$/, // Transpila archivos .js
+        exclude: /node_modules/, // Ignora node_modules
         use: {
-        loader: 'babel-loader'
-        }
+          loader: 'babel-loader', // Usa babel-loader
+        },
     },
+    
     {
-        test: /\.ttf$/,
-        type: 'asset/resource'
-    }
-    ]
+      test: /\.css$/, // Maneja archivos .css
+      use: [
+          'style-loader', // Inyecta los estilos en el DOM
+          'css-loader', // Interpreta los archivos CSS
+      ],
+  },
+    ],
 },
+
 plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(), // Limpia la carpeta de salida antes de cada build
     new HtmlWebpackPlugin({
-    template: './fuente/index.html'
-    })
+    template: './fuente/index.html' // Usa este archivo como plantilla para el HTML
+    }),
 ],
-mode: 'production'
+mode: 'production', 
 };

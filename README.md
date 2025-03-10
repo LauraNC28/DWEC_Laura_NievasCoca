@@ -193,3 +193,5 @@ Después de realizar las pruebas, se obtuvieron los siguientes resultados:
 
 ## **Conclusión**
 El sitio web funciona correctamente en navegadores modernos y dispositivos móviles, pero presenta problemas de compatibilidad en navegadores antiguos como Internet Explorer 11. Se recomienda implementar polyfills o soluciones alternativas para mejorar la compatibilidad con navegadores antiguos.
+
+Webpack ahora puede manejar archivos CSS, inyectando los estilos en el DOM y permitiendo que tu aplicación tenga un diseño visual adecuado. Esto es esencial para proyectos modernos que requieren estilos personalizados y compatibilidad con diferentes navegadores.

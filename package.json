@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "Proyecto cliente",
   "main": "app.js",
-
   "scripts": {
     "doc": "jsdoc -c jsdoc.json",
     "start": "webpack serve --open",
     "build": "webpack --mode production"
   },
-
   "browserslist": [
     "> 0.2%",
     "last 2 versions",
@@ -18,12 +16,10 @@
     "firefox >= 20",
     "safari >= 7"
   ],
-
   "keywords": [
     "documentar",
     "webpack"
   ],
-  
   "author": "Laura Nievas Coca",
   "license": "ISC",
   "devDependencies": {
@@ -32,13 +28,14 @@
     "@babel/preset-env": "^7.26.9",
     "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "jsdoc": "^4.0.4",
+    "style-loader": "^4.0.0",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
-
   "dependencies": {
     "regenerator-runtime": "^0.14.1"
   }
