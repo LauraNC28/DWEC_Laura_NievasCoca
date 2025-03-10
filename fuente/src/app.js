@@ -54,7 +54,7 @@ function main() {
     } while (opcion !== 4); // El bucle sigue hasta que el usuario elige salir
 }
 
-document.getElementById('app').innerHTML = "<h1>¡Funciona!</h1>";
+
 
 // 1️ Crear asignaturas
 const matematicas = new Asignatura("Matematicas");
