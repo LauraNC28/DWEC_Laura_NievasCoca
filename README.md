@@ -107,7 +107,7 @@ Sigue estos pasos para configurar el entorno de desarrollo:
 2. **Clonar el repositorio**:
    - Clona el repositorio de GitHub en tu máquina local:
      ```bash
-     git clone https://github.com/LauraNC28/DWEC_Laura_Nievas_Coca_2.git
+     git clone https://github.com/LauraNC28/DWEC_Laura_NievasCoca.git
      cd ProyectoSGAEA
      ```
 
@@ -122,7 +122,7 @@ Sigue estos pasos para configurar el entorno de desarrollo:
      ```bash
      npm run build
      ```
-   - Esto generará los archivos en la carpeta `dist`.
+   - Esto generará los archivos en la carpeta `docs`.
 
 ---
 
@@ -147,9 +147,9 @@ Para desplegar el proyecto en GitHub Pages, sigue estos pasos:
 3. **Acceder al sitio web**:
    - Una vez configurado, accede a tu sitio web en la URL proporcionada por GitHub Pages, por ejemplo:
      ```
-     https://LauraNC28.github.io/DWEC_Laura_Nievas_Coca_2/
+     https://LauraNC28.github.io/DWEC_Laura_NievasCoca/
      ```
-     
+
 ---
 
 ## **3. Probar el código**
@@ -179,15 +179,12 @@ Después de realizar las pruebas, se obtuvieron los siguientes resultados:
 ### **Navegadores modernos**
 - **Chrome (última versión)**: El sitio web funciona correctamente. Todos los elementos se muestran como se esperaba.
 - **Firefox (última versión)**: Comportamiento similar a Chrome. Sin problemas detectados.
-- **Safari (última versión)**: Funciona correctamente, pero se observa un ligero retraso en la carga de imágenes.
 
 ### **Navegadores antiguos**
 - **Internet Explorer 11**: El sitio web no funciona correctamente. Algunas funcionalidades modernas (como Flexbox y Grid) no son compatibles.
-- **Safari 12**: Funciona correctamente, pero algunas animaciones CSS no se reproducen.
 
 ### **Dispositivos móviles**
 - **Android (Chrome)**: El sitio web es responsive y se adapta correctamente a diferentes tamaños de pantalla.
-- **iOS (Safari)**: Funciona correctamente, pero se observa un problema con el desplazamiento suave (smooth scrolling).
 
 ### **Accesibilidad**
 - El sitio web pasa las pruebas básicas de accesibilidad, pero se recomienda mejorar el contraste de colores para cumplir con las pautas WCAG.
@@ -195,5 +192,4 @@ Después de realizar las pruebas, se obtuvieron los siguientes resultados:
 ---
 
 ## **Conclusión**
-
 El sitio web funciona correctamente en navegadores modernos y dispositivos móviles, pero presenta problemas de compatibilidad en navegadores antiguos como Internet Explorer 11. Se recomienda implementar polyfills o soluciones alternativas para mejorar la compatibilidad con navegadores antiguos.
